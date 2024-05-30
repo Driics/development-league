@@ -18,7 +18,13 @@ const config: Config = {
             colors: {
                 "primary": {
                     DEFAULT: "#004fe8",
-                    "foreground": "#fff",
+                    "foreground": {
+                        DEFAULT: "#fff",
+                        "muted": "#666"
+                    },
+                    "component": {
+                        "secondary": "#94aefa33"
+                    }
                 },
                 "secondary": "#d8d8d8"
             }

@@ -30,7 +30,7 @@ const Header = (props: HeaderProps) => (
                         </h1>
                         <div>
                             <div
-                                className=" text-shadow !ml-0 !text-left xl:text-xl text-[calc(1.0073529412rem+.1838235294vw)] text-black mb-8 font-medium mx-auto md:text-center"
+                                className="text-shadow !ml-0 !text-left xl:text-xl text-[calc(1.0073529412rem+.1838235294vw)] text-gray-800 mb-8 font-medium mx-auto md:text-center"
                                 style={{maxWidth: "540px"}}>
                                 <p>{props.subtitle}</p>
                             </div>
