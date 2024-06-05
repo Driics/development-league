@@ -3,7 +3,6 @@ import InfoBlock from "@/components/Info";
 import Nav from "@/components/Nav";
 import StatsSection from "@/components/Cards";
 import {AwardIcon, CherryIcon, CookieIcon, DumbbellIcon, MedalIcon, TvIcon} from "lucide-react";
-import dynamic from "next/dynamic";
 import Test from "@/components/test";
 
 const useCases = [
@@ -49,15 +48,16 @@ export default function Home() {
             <Test
                 badge="Для начинающих спортсменов"
                 title={(
-                    <>Для мероприятий которые <span className="text-[#144FF0]">(</span>серьезно<span className="text-[#144FF0]">)</span> относятся к себе</>
+                    <>Для мероприятий которые <span className="text-[#144FF0]">(</span>серьезно<span
+                        className="text-[#144FF0]">)</span> относятся к себе</>
                 )}
                 icons={[
-                    { iconSvg: <CherryIcon />, percentage: '1'},
-                    { iconSvg: <CookieIcon />, percentage: '2'},
-                    { iconSvg: <TvIcon />, percentage: '3'},
-                    { iconSvg: <AwardIcon />, percentage: '4'},
-                    { iconSvg: <DumbbellIcon />, percentage: '5'},
-                    { iconSvg: <MedalIcon />, percentage: '6'},
+                    {iconSvg: <CherryIcon/>, percentage: '1'},
+                    {iconSvg: <CookieIcon/>, percentage: '2'},
+                    {iconSvg: <TvIcon/>, percentage: '3'},
+                    {iconSvg: <AwardIcon/>, percentage: '4'},
+                    {iconSvg: <DumbbellIcon/>, percentage: '5'},
+                    {iconSvg: <MedalIcon/>, percentage: '6'},
                     // Add more icons as needed
                 ]}
                 progressUnlocked={{

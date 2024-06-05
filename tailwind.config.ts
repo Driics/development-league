@@ -26,6 +26,11 @@ const config: Config = {
                         "secondary": "#94aefa33"
                     }
                 },
+                "popover": {
+                    DEFAULT: "#1a1a1a",
+                    "foreground": "#fff"
+                },
+                "accent": "#666",
                 "secondary": "#d8d8d8"
             }
         },

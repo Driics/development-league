@@ -58,7 +58,7 @@ const Test: React.FC<CardProps> = ({
                                     </div>
                                 </div>
                                 <div
-                                    className="flex items-center gap-2 p-2 hover:bg-primary-component-secondary rounded-lg cursor-pointer">
+                                    className="flex items-center gap-2 p-2 hover:bg-primary-component-secondary rounded-lg cursor-pointer transition-all">
                                     <div
                                         className="!bg-[#343434] h-10 w-10 rounded flex justify-center items-center flex-shrink-0">
                                         <Image src={"/plane.svg"} alt={"plane"} loading="lazy" style={{color: 'transparent'}} width={-1} height={-1}/>
