@@ -28,7 +28,7 @@ const Test: React.FC<CardProps> = ({
                                        affordableDescription,
                                    }) => {
     return (
-        <div className="px-5 py-16">
+        <div className="px-5 py-16" id="#test">
             <div
                 className="h-full border container mx-auto relative gap-8 bg-neutral-page-secondary rounded-3xl border-[#ededed] w-full overflow-hidden">
                 <div className="grid md:grid-cols-2 p-10">

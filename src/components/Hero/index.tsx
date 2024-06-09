@@ -16,7 +16,6 @@ export interface HeaderProps {
     title: string | React.ReactNode,
     subtitle: string | React.ReactNode,
     cta: {
-        link: string | "",
         text: string
     }
 }
@@ -25,8 +24,9 @@ const Header = (props: HeaderProps) => (
     <section className="relative bg-white pb-40 lg:pb-32 max-md:pb-28 max-sm:pb-[72px]">
         <div className="relative">
             <div className="h-screen max-h-[90vh] min-h-[600px] lg:max-h-[1240px]">
-                <Image src={"/volleyball.png"} alt={"back"} sizes="100vh"
-                       className="object-cover object-center md:block pointer-events-none opacity-30" loading="lazy"
+                <Image src={"/banner.jpg"} alt={"back"} sizes="100vh"
+                       className="object-cover object-center md:block pointer-events-none opacity-50 grayscale"
+                       loading="lazy"
                        fill={true}/>
                 <div className=" bg-gradient-to-b from-blue-400"
                      style={{position: "absolute", height: "100%", width: "100%", left: 0, top: 0}}/>
@@ -48,10 +48,6 @@ const Header = (props: HeaderProps) => (
                             </div>
                             <div className="w-full md:mx-auto flex justify-start">
                                 <div className="md:flex md:space-x-2">
-                                    {/*<Link href={props.cta.link}
-                                          className={cn(buttonVariants({variant: "default", size: "lg"}), "px-6")}>
-                                        {props.cta.text}
-                                    </Link>*/}
                                     <Dialog>
                                         <DialogTrigger className={cn(buttonVariants({
                                             variant: "default",
@@ -64,7 +60,23 @@ const Header = (props: HeaderProps) => (
                                                     Отправьте заявку и мы свяжемся с вами в ближайшее время
                                                 </DialogDescription>
                                             </DialogHeader>
-                                            {/*<div className="grid gap-4 py-4">
+                                            <InputForm/>
+                                            <DialogFooter>
+                                                <Button type="submit" form="contactForm">Отправить</Button>
+                                            </DialogFooter>
+                                        </DialogContent>
+                                    </Dialog>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+)
+
+{/*<div className="grid gap-4 py-4">
                                                 <div className="grid grid-cols-4 items-center gap-4">
                                                     <Label htmlFor="name" className="text-right">
                                                         Ваше имя
@@ -86,20 +98,5 @@ const Header = (props: HeaderProps) => (
                                                     />
                                                 </div>
                                             </div>*/}
-                                            <InputForm/>
-                                            <DialogFooter>
-                                                <Button type="submit" form="contactForm">Отправить</Button>
-                                            </DialogFooter>
-                                        </DialogContent>
-                                    </Dialog>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-)
 
 export default Header;

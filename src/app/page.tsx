@@ -4,6 +4,8 @@ import Nav from "@/components/Nav";
 import StatsSection from "@/components/Cards";
 import {AwardIcon, CherryIcon, CookieIcon, DumbbellIcon, MedalIcon, TvIcon} from "lucide-react";
 import Test from "@/components/test";
+import WhatWeDoBlock from "@/components/WhatWeDoBlock";
+import Footer from "@/components/Footer";
 
 const useCases = [
     {
@@ -33,8 +35,7 @@ const heroSection: HeaderProps = {
     ),
     subtitle: "Зарегистрируйтесь сейчас на наши предстоящие мероприятия и станьте частью Сообщества, которое меняет правила игры!",
     cta: {
-        text: "Связаться с нами",
-        link: ""
+        text: "Связаться с нами"
     }
 }
 
@@ -44,7 +45,6 @@ export default function Home() {
         <main>
             <Nav/>
             <Hero title={heroSection.title} subtitle={heroSection.subtitle} cta={heroSection.cta}/>
-            <StatsSection useCases={useCases}/>
             <Test
                 badge="Для начинающих спортсменов"
                 title={(
@@ -69,10 +69,40 @@ export default function Home() {
                     description: "описание описание описание"
                 }}
             />
+            <StatsSection useCases={useCases}/>
             <InfoBlock imageSrc={"/img.png"}
                        imageAlt={"woman"}
                        heading={"Информация"}
                        content={"Lorem ipsum dolor sit amet, consectetur adipisicing elit. A atque dolorum earum enim est eveniet molestias nihil odio quidem quos sunt, tenetur velit. Aspernatur assumenda culpa cum delectus harum inventore laboriosam porro quae quasi sequi. Aliquid, dolore, suscipit! Adipisci consectetur consequatur dicta est id inventore, molestiae molestias nam quia ut voluptate voluptates! At delectus dolorum est et iusto modi provident?"}/>
+
+            <WhatWeDoBlock
+                title="Что мы предлагаем?"
+                steps={[
+                    {
+                        title: 'Test 1',
+                        description:
+                            'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias at modi numquam quibusdam repellendus tenetur.',
+                    },
+                    {
+                        title: 'Test 2',
+                        description:
+                            'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias at modi numquam quibusdam repellendus tenetur.',
+                    },
+                    {
+                        title: 'Test 3',
+                        description:
+                            'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias at modi numquam quibusdam repellendus tenetur.',
+                    },
+                    {
+                        title: 'Test 4',
+                        description:
+                            'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias at modi numquam quibusdam repellendus tenetur.',
+                    },
+                ]}
+                getStartedText="Начать сейчас"
+                buttonText="Оставить заявку"
+            />
+            <Footer/>
         </main>
     );
 }
