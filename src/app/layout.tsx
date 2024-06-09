@@ -3,6 +3,7 @@ import {Inter} from "next/font/google";
 import "./globals.css";
 import React from "react";
 import {Toaster} from "@/components/ui/toaster"
+import {cn} from "@/lib/utils";
 
 const inter = Inter({subsets: ["latin", "cyrillic"]});
 
@@ -18,7 +19,7 @@ export default function RootLayout({
 }>) {
     return (
         <html lang="ru">
-        <body className={inter.className}>
+        <body className={cn(inter.className, "scroll-smooth")}>
         {children}
         <Toaster/>
         </body>

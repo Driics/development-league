@@ -6,6 +6,7 @@ import {z} from "zod"
 import {Form, FormControl, FormField, FormItem, FormLabel, FormMessage,} from "@/components/ui/form"
 import {Input} from "@/components/ui/input"
 import {toast} from "@/components/ui/use-toast";
+import {useState} from "react";
 
 const phoneRegex = new RegExp(
     /^((8|\+7)[\- ]?)?(\(?\d{3}\)?[\- ]?)?[\d\- ]{7,10}$/
@@ -17,6 +18,8 @@ const FormSchema = z.object({
 })
 
 export function InputForm() {
+    const [requestSended, setRequestSended] = useState<boolean>(false)
+
     const form = useForm<z.infer<typeof FormSchema>>({
         resolver: zodResolver(FormSchema),
         defaultValues: {
@@ -35,6 +38,7 @@ export function InputForm() {
         })
 
         if (response.ok) {
+            setRequestSended(true)
             toast({
                 title: "Спасибо за обращение!",
                 description: "Мы скоро с вами свяжемся для уточнения деталей"

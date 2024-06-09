@@ -26,12 +26,33 @@ const config: Config = {
                         "secondary": "#94aefa33"
                     }
                 },
+                "brand": "#004fe8",
+                "alternative": "#161616",
+                "neutral": {
+                    "component": {
+                        "secondary": "#fafafa"
+                    }
+                },
                 "popover": {
                     DEFAULT: "#1a1a1a",
                     "foreground": "#fff"
                 },
                 "accent": "#666",
                 "secondary": "#d8d8d8"
+            },
+            keyframes: {
+                fadeIn: {
+                    '0%': {transform: 'scale(0.95)', opacity: 0},
+                    '100%': {transform: 'scale(1)', opacity: 1},
+                },
+                fadeOut: {
+                    '0%': {transform: 'scale(1)', opacity: 1},
+                    '100%': {transform: 'scale(0.95)', opacity: 0},
+                },
+            },
+            animation: {
+                'fade-in': 'fadeIn 300ms both',
+                'fade-out': 'fadeOut 300ms both',
             }
         },
     },

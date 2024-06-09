@@ -9,7 +9,7 @@ interface Props {
 }
 
 const StatsSection = ({useCases}: Props) => (
-    <section className="relative z-20 max-sm:mt-[11px] lg:pb-32 max-md:pb-28 max-sm:pb-[72px]">
+    <section className="relative z-20 max-sm:mt-[11px] lg:pb-32 max-md:pb-28 max-sm:pb-[72px]" id="stats">
         <ul className="container flex max-sm:flex-col max-sm:items-center max-sm:gap-14">
             {useCases.map((useCase, i) => {
                 return <Card title={useCase.title} subtitle={useCase.subtitle} highlights={useCase.highlights}
