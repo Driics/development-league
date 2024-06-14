@@ -53,7 +53,7 @@ const Footer = () => (
                     </div>
                 </div>
                 <div>
-                    <Image src={"/vercel.svg"} alt={"Logo"} className="h-full object-cover" loading="lazy" width={500} height={0} />
+                    <Image src={"/logo.svg"} alt={"Logo"} className="h-full object-cover" loading="lazy" width={256} height={0} />
                 </div>
             </div>
         </div>

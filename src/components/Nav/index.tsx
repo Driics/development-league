@@ -60,9 +60,9 @@ const Nav = () => {
                                     <Link href="/"
                                           className="block w-auto h-6 focus-visible:ring-2 focus-visible:outline-none focus-visible:ring-foreground-lighter focus-visible:ring-offset-4 focus-visible:ring-offset-background-alternative focus-visible:rounded-sm">
                                         <Image
-                                            src={"/vercel.svg"}
-                                            width={124}
-                                            height={24}
+                                            src={"/logo.svg"}
+                                            width={48}
+                                            height={48}
                                             alt="Supabase Logo"
                                         />
                                     </Link>

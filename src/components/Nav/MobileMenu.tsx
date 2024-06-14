@@ -72,10 +72,10 @@ const MobileMenu = ({open, setOpen, menu}: Props) => {
                             <Link href={"/"} as={"/"}
                                   className="block w-auto h-6 focus-visible:ring-2 focus-visible:outline-none focus-visible:ring-foreground-lighter focus-visible:ring-offset-4 focus-visible:ring-offset-background-alternative focus-visible:rounded-sm">
                                 <Image
-                                    src={"/vercel.svg"}
-                                    width={124}
+                                    src={"/logo.svg"}
+                                    width={48}
                                     height={24}
-                                    alt="Supabase Logo"
+                                    alt="Logo"
                                 />
                             </Link>
                             <button
